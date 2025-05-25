@@ -12,8 +12,14 @@ class Tvshow_serie extends CI_Controller {
 	}
 	public function id($id){
 		$tvshow = $this->model_tvshow->getSerie($id);
+		$genre = $this->model_tvshow->getGenre($id);
+		$donnee = [
+			'tvshow' => $tvshow,
+			'genre' => $genre
+		];
+
 		$this->load->view('layout/header');
-		$this->load->view('tvshow_page_serie', ['tvshow' => $tvshow]);
+		$this->load->view('tvshow_page_serie', $donnee);
 		$this->load->view('layout/footer');
 	}
 

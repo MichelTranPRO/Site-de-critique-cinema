@@ -20,13 +20,21 @@ class Model_tvshow extends CI_Model {
 	/* fonction pour donner des données en fonction de l'id */
 	public function getSerie($id){
     	$query = $this->db->query("
-        	SELECT tvshow.name,tvshow.id,jpeg,COUNT(season.id) AS nb
-        	FROM tvshow
+        	SELECT tvshow.name,tvshow.id,tvshow.homepage,tvshow.overview,jpeg,COUNT(season.id) AS nbSaisons
+        	FROM tvshow 
         	JOIN poster ON tvshow.posterId = poster.id
         	LEFT JOIN season ON season.tvShowId = tvshow.id
         	WHERE tvshow.id = ?
-        	GROUP BY tvshow.id, tvshow.name, jpeg
     		", [$id]);
     	return $query->row();
     }
+	public function getGenre($id){
+		$query = $this->db->query("
+		SELECT genre.name as genres
+		FROM genre 
+		JOIN tvshow_genre ON genre.id = tvshow_genre.genreId
+		WHERE tvshowId = ?
+		", [$id]);
+		return $query->result();
+	}
 }
