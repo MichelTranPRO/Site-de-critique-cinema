@@ -1,9 +1,13 @@
 * {
     text-decoration: none;
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
 }
 h1, h2, h3, h4, h5, h6{
     color: #373c44;
 }
+
 
 .bloc_info{
     display: flex;
@@ -50,3 +54,37 @@ h1, h2, h3, h4, h5, h6{
 .details a:hover{
     background-color: #015887;
 }
+
+.bloc_saisons{
+    display: grid;
+    grid-template-columns: repeat(7, 0.1fr);
+    grid-gap: 10px;
+    grid-auto-flow: row;
+    justify-content: center;
+}
+.bloc_saisons img {
+    max-width: none !important;
+}
+
+
+.saison_items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.article img {
+    width: 100vh;
+    height: 100%;
+
+}
+.txt_saison{
+    text-align: center;
+}
+
+
+
+

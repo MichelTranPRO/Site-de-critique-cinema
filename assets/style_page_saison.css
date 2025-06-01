@@ -1,0 +1,40 @@
+.bloc_saison{
+    display: flex;
+    align-items: center;
+    padding: 10vh 0 10vh 0;
+}
+
+.details{
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    justify-content: center;
+    padding-left: 10vh;
+    border-left: 1px solid #cfd5e2;
+}
+.bloc_saison img {
+    height: 35vh;
+    width: 13vw;
+    border-radius: 2vh;
+    margin-right: 10vh;
+}
+.episodes{
+    display: grid;
+    grid-template-columns: 4vw 15vw auto;
+}
+.titre{
+    padding-right: 2vh;
+}
+.episodes h4{
+    margin: 0px !important;
+    padding: 0 0 2vh 0;
+}
+
+.episodes p{
+    border-top: solid #cfd5e2 1px;
+    margin: 0px !important;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
