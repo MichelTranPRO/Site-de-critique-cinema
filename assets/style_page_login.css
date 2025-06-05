@@ -1,0 +1,13 @@
+.texte_haut h1{
+    text-align: center;
+}
+label, h5{
+    color: #373c44!important;
+}
+.bloc_login .texte_milieu h5{
+    color: #373c44!important;
+}
+.erreur{
+    color: red !important;
+    font-size: 0.8em;
+}

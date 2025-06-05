@@ -1,0 +1,21 @@
+*{
+    margin-bottom: 0px!important;
+    text-decoration: none;
+    list-style: none!important;
+}
+.bloc_profil{
+    display: flex;
+    height: 70vh;
+    align-items: center;
+}
+.texte_info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vh;
+}
+
+.icon_profil i {
+  font-size: 15rem;
+  padding: 10vh;
+  border-right: 1px solid #cfd5e2;
+}

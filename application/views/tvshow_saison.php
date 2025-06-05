@@ -17,7 +17,12 @@
     foreach ($episodes as $ep){                                                                                                                                   
         echo '<p class="nb_ep">'.$ep['ep_number'].'</p>';
         echo '<p class="titre">'.$ep['name'].'</p>';
-        echo '<p class="description">'.$ep['description'].'</p>';
+        if(empty($ep['description'])){
+            echo '<p class="description">Pas de description. </p>';
+        }
+        else{
+            echo '<p class="description">'.$ep['description'].'</p>';
+        }
     }
     echo '</div>';
     ?>

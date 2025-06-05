@@ -17,7 +17,8 @@
 				<ul>
 					<li><strong>Séries</strong></li>
 					<li><a href="/~tranm/SAE_WEB_2.02/"><i class="fas fa-home"></i></a></li>
-					<li><a href="login"><i class="fas fa-user"></i></a></li>
+					<li><?= anchor("user/login", '<i class="fas fa-user"></i>') ?></li>
+					<li><?php if (isset($_SESSION['connection']) && $_SESSION['connection']){echo anchor("user/logout", '<i class="fa-solid fa-right-from-bracket"></i>');} ?></li>
 				</ul>
 				<ul>
 					<li>

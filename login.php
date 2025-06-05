@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="<?= base_url('assets/style_page_details.css') ?>">
