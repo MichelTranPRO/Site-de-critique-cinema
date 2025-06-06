@@ -5,7 +5,7 @@
     </div>
     <form action="" method="POST"> 
     <div class="texte_milieu">
-
+        
         <h5><label for="email"></label></h5>
         <input id="email" name="email"type="email" size="30" required="" placeholder="Entrez votre mail..." 
         <?php if(!empty($email)){

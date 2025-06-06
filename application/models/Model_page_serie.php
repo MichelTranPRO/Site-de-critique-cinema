@@ -36,4 +36,25 @@ class Model_page_serie extends CI_Model {
 		", [$id]);
 		return $query->result();
 	}
+	public function getAvisSerie($id){
+		$query = $this->db->query("
+			SELECT a.titre, a.note, a.description, u.nom, u.prenom
+			FROM avis a JOIN user u ON a.user_id=u.id
+			WHERE tvshow_id = ?
+			AND season_id IS null
+		", [$id]);
+		return $query->result();
+	}
+	public function setAvis($info){
+		$query = $this->db->query("
+		INSERT INTO avis (titre,description,note,tvshow_id,user_id)
+		VALUES (?,?,?,?,?)
+		",[
+			$info['titre'],
+			$info['description'], 
+			$info['note'], 
+			$info['id'],
+			$info['user_id'],
+		]);
+	}
 }

@@ -32,9 +32,9 @@ class Model_user extends CI_Model {
 		",[$email]);
 		return $query->row();
 	} 	
-	public function getPrenomNom($email){
+	public function getPrenomNomId($email){
 		$query = $this->db->query("
-		SELECT prenom,nom 
+		SELECT prenom,nom,id
 		FROM user 
 		WHERE email= ?
 		",[$email]);

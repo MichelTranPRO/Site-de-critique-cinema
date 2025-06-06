@@ -23,15 +23,16 @@ class User extends CI_Controller {
 			
 			if($email_verif !== null){
 				$donnee['email']=$email;
-				$prenom_nom=$this->model_user->getPrenomNom($email);
+				$prenom_nom_id=$this->model_user->getPrenomNomId($email);
 				$db_mdp=$this->model_user->getMDP($email);
 				$mdp_hash=$db_mdp->mot_de_passe;
 				if (password_verify($mdp, $mdp_hash)){
 					$_SESSION=[
 						'connection' => true,
+						'id' => $prenom_nom_id->id,
 						'email' => $email,
-						'prenom' => $prenom_nom->prenom,
-						'nom' => $prenom_nom->nom,
+						'prenom' => $prenom_nom_id->prenom,
+						'nom' => $prenom_nom_id->nom,
 
 					];
 					redirect('user/compte');
@@ -94,7 +95,7 @@ class User extends CI_Controller {
 	public function compte(){
 		$donnee;
 		if ($_SESSION['connection'] === true){
-
+			$donnee['test']=$_SESSION['prenom'];
 			$this->load->view('layout/header');
 			$this->load->view('compte');
 			$this->load->view('layout/footer');
