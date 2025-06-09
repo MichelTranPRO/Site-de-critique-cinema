@@ -36,4 +36,16 @@ class Model_tvshow extends CI_Model {
 		}
 		return $query->result();
 	}
+
+	public function recherche($nomRecherche){
+		
+		$query = $this->db->query("
+			SELECT tvshow.name,tvshow.id,jpeg, 
+					(SELECT COUNT(*) from season
+					 WHERE season.tvShowId = tvshow.id) as nb
+			FROM tvshow JOIN poster ON tvshow.posterId = poster.id
+			WHERE name LIKE ?
+		", [$nomRecherche]);
+		return $query->result();
+	}
 }
