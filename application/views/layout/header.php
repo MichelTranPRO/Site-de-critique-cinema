@@ -30,6 +30,9 @@ if (session_status() === PHP_SESSION_NONE) {
 						<form method="GET" action="." role="search">
 							<select name="type" aria-label="Type">
 								<option selected disabled value="">Genre</option>
+								<?php foreach ($genre as $row){
+									echo '<option value="'.$row->genreId.'">'.$row->name.'</option>';
+								} ?>
 							</select>
 							<input name="search" type="search" placeholder="Search" />
 							<input type="submit" value="Search" />
