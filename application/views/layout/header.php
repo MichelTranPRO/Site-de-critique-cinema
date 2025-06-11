@@ -27,7 +27,7 @@ if (session_status() === PHP_SESSION_NONE) {
 				</ul>
 				<ul>
 					<li>
-						<form method="GET" action="." role="search">
+						<form method="GET" action="<?=site_url('tvshow');?>" role="search">
 							<select name="type" aria-label="Type">
 								<option selected disabled value="">Genre</option>
 								<?php foreach ($genre as $row){
