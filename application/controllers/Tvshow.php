@@ -14,12 +14,15 @@ class Tvshow extends CI_Controller {
 		$genre = $this->model_tvshow->getGenre();
 		$donnee['genre'] = $genre;
 		$tvshow = $this->model_tvshow->getTvshow();
+
+		// barre de recherche
 		if ($this->input->get('search')){
-			$nomRecherche = trim(strip_tags($this->input->get('search')));
-			$nomRecherche = '%'.$nomRecherche.'%';
+			$nomRecherche = trim(strip_tags($this->input->get('search'))); // trim supprime les espaces au début et a la fin et strip_tags supprime toutes les balises html et php
+			$nomRecherche = '%'.$nomRecherche.'%'; // '%' c'est pour dire n'importe quelle chaine de caractères 
 			$tvshow = $this->model_tvshow->recherche($nomRecherche);
 		}
 
+		// genre
 		if($this->input->get('type')){
 			$tvshow = $this->model_tvshow->genreRecherche($this->input->get('type'));
 		}

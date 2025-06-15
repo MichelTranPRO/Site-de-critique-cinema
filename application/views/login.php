@@ -6,17 +6,17 @@
     <form action="" method="POST"> 
     <div class="texte_milieu">
         
-        <h5><label for="email"></label></h5>
-        <input id="email" name="email"type="email" size="30" required="" placeholder="Entrez votre mail..." 
+        <label for="email"></label>
+        <input id="email" name="email" type="email" size="30" required="" placeholder="Entrez votre mail..." 
         <?php if(!empty($email)){
             echo 'value="'.htmlspecialchars($email).'"';
         }
-        ?>/>
+        ?>>
 
         <?php if(!empty($message['erreur_email'])){
             echo "<div class=erreur>".htmlspecialchars($message['erreur_email'])."</div>";
             }?>
-        <h5><label for="mdp"></label></h5>
+        <label for="mdp"></label>
         <input id="mdp" name="mdp" type="password" size="30" required="" placeholder="Entrez votre mot de passe..."/>
         <?php
         if(!empty($email)){
@@ -30,4 +30,5 @@
         ?>
         <input id="envoyer" name="envoyer" type="submit" value="Envoyer"/>
     </div>
+    </form>
 </div>

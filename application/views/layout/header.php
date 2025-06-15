@@ -30,9 +30,24 @@ if (session_status() === PHP_SESSION_NONE) {
 						<form method="GET" action="<?=site_url('tvshow');?>" role="search">
 							<select name="type" aria-label="Type">
 								<option selected disabled value="">Genre</option>
-								<?php foreach ($genre as $row){
+								<option value="1">Action & Adventure</option>
+								<option value="2">Crime</option>
+								<option value="3">Drame</option>
+								<option value="4">Comédie</option>
+								<option value="5">Science-Fiction & Fantastique</option>
+								<option value="6">Mystère</option>
+								<option value="7">Western</option>
+								<option value="8">War & Politics</option>
+								<option value="9">Familial</option>
+								<option value="10">Animation</option>
+								<option value="11">Romance</option>
+								<!-- A la base j'avais fais ce code mais les genres s'affichaient que sur la page d'accueil
+								<?php 
+								/**foreach ($genre as $row){
 									echo '<option value="'.$row->genreId.'">'.$row->name.'</option>';
-								} ?>
+								} */
+								?>
+								-->
 							</select>
 							<input name="search" type="search" placeholder="Search" />
 							<input type="submit" value="Search" />

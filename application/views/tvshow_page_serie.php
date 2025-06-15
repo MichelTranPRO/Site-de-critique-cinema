@@ -8,7 +8,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <div class="bloc_info">
 	<?php
-	echo '<img src="data:image/jpeg;base64,'.base64_encode($tvshow->jpeg).'" />';
+	echo '<img src="data:image/jpeg;base64,'.base64_encode($tvshow->jpeg).'" alt="image série">';
 	echo '<div class="details">'; // debut div details
 		echo '<h1>'. $tvshow->name. '</h1>';
 		echo '<div class="genre">'; // debut div genre
@@ -33,7 +33,7 @@ if (session_status() === PHP_SESSION_NONE) {
 		echo "<header class='short-text'>";
 		echo anchor("Tvshow_saison/saisonId/".$episodes[0]['saisonId'], "{$nomSaison}");
 		echo "</header>";
-		echo '<img src="data:image/jpeg;base64,'.base64_encode($episodes[0]['jpeg_saison']).'" />';
+		echo '<img src="data:image/jpeg;base64,'.base64_encode($episodes[0]['jpeg_saison']).'" alt="image saison">';
 		echo '</article>';
 	}
 	?>

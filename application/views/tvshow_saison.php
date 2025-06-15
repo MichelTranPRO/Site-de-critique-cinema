@@ -7,7 +7,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <div class="bloc_saison">
     <?php  
-    echo '<img src="data:image/jpeg;base64,'.base64_encode($jpeg).'" />';
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($jpeg).'" alt="image serie">';
         echo '<div class="details">';
             echo '<h1>'.$saison.'</h1>';
             echo '<p>'.$nb_episodes.' Episodes</p>';
