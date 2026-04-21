@@ -1,4 +1,4 @@
-# CineCritique 🎬
+# CineCritique 2025
 
 Notre projet **"CineCritique"**, un site web dynamique de critique de cinéma. Ce projet a été réalisé dans le cadre de la **SAÉ 2.3** (Installation de services réseaux / Développement Web) de l'IUT de Sénart-Fontainebleau en 2024.
 
